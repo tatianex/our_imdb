@@ -27,6 +27,11 @@ class MoviesAdapter (
 
     override fun getItemCount(): Int = movies.size
 
+    fun updateMovies(movies: List<Movie>){
+        this.movies = movies
+        notifyDataSetChanged()
+    }
+
 }
 
 class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
